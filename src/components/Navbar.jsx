@@ -24,7 +24,10 @@ align-items: center;
 
 const SearchContainer = styled.div``;
 const Input = styled.input``;
-const Center = styled.div``;
+const Center = styled.div`
+flex: 1;
+text-align: center;
+`;
 const Logo = styled.h1``;
 const Right = styled.div``;
 const MenuItem = styled.div``;
