@@ -20,12 +20,21 @@ const Button = styled.button``;
 
 
 const Slider = () => {
+    const [slideIndex, setSlideIndex] = useState(0);
+    const handleClick = (direction) => {
+        if (direction === "left") {
+            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+        } else {
+            setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+        }
+    }
     return (
         <Container>
-            <Arrow>
+            <Arrow direction="left" onClick={() => handleClick("left")}>
                 <ArrowLeftOutlined />
             </Arrow>
-            <Wrapper>
+            <Wrapper slideIndex={slideIndex}>
+                {sliderItems.map((item) => (
                 <Slide>
                     <ImgContainer>
                     <Image />
@@ -36,8 +45,9 @@ const Slider = () => {
                         <Button></Button>
                     </InfoContainer>
                 </Slide>
+                ))}
             </Wrapper>
-            <Arrow>
+            <Arrow direction="right" onClick={() => handleClick("right")}>
                 <ArrowRightOutlined />
             </Arrow>
         </Container>
