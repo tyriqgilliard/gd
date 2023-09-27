@@ -4,6 +4,23 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
+// Internal Components for Navbar //
+const Container = styled.div`
+    height: 60px;
+    `;
+
+const Wrapper = styled.div``;
+const Left = styled.div``;
+const SearchContainer = styled.div``;
+const Input = styled.input``;
+const Center = styled.div``;
+const Logo = styled.h1``;
+const Right = styled.div``;
+const MenuItem = styled.div``;
+
+
+
+
 
 const Navbar = () => {
   return (
