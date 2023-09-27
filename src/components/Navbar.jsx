@@ -29,7 +29,12 @@ flex: 1;
 text-align: center;
 `;
 const Logo = styled.h1``;
-const Right = styled.div``;
+const Right = styled.div`
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+`;
 const MenuItem = styled.div``;
 
 
