@@ -10,6 +10,7 @@ height: 100vh;
 display: flex;
 position: relative;
 overflow: hidden;
+${mobile({ display: "none"})}
 `;
 
 const Arrow = styled.div`
