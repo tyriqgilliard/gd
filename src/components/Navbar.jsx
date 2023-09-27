@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
@@ -6,7 +6,7 @@ import { mobile } from "../responsive";
 
 // Internal Components for Navbar //
 const Container = styled.div`
-height: 60px;
+  height: 60px;
 `;
 
 const Wrapper = styled.div`
@@ -17,66 +17,63 @@ justify-content: space-between;
 `;
 
 const Left = styled.div`
-flex: 1;
-display: flex;
-align-items: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
 `;
 
 const SearchContainer = styled.div`
-border: 0.5px solid lightgray;
-display: flex;
-align-items: center;
-margin-left: 25px;
-padding: 5px;
+  border: 0.5px solid lightgray;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding: 5px;
 `;
 const Input = styled.input`
-border: none;
+  border: none;
 `;
 const Center = styled.div`
-flex: 1;
-text-align: center;
+  flex: 1;
+  text-align: center;
 `;
 const Logo = styled.h1`
-font-weight: bold;
+  font-weight: bold;
 `;
 const Right = styled.div`
-flex: 1;
-display: flex;
-align-items: center;
-justify-content: flex-end;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 const MenuItem = styled.div`
-font-size: 14px;
-cursor: pointer;
-margin-left: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
 `;
 
-
-
-
-
+// Navigation Bar
 const Navbar = () => {
   return (
     <Container>
-        <Wrapper>
-            <Left>
-                <SearchContainer>
-                    <Input placeholder="Search" />
-                    <Search style={{ color: "gray", fontSize: 16 }} />
-                </SearchContainer>
-            </Left>
-            <Center>
-                <Logo></Logo>
-            </Center>
-            <Right>
-                <MenuItem>REGISTER</MenuItem>
-                <MenuItem>
-                <Badge badgeContent={4} color="primary">
-                    <ShoppingCartOutlined />    
-                </Badge>
-            </MenuItem>
-            </Right>
-        </Wrapper>
+      <Wrapper>
+        <Left>
+          <SearchContainer>
+            <Input placeholder="Search" />
+            <Search style={{ color: "gray", fontSize: 16 }} />
+          </SearchContainer>
+        </Left>
+        <Center>
+          <Logo>GLOBALLY DISCLOSED</Logo>
+        </Center>
+        <Right>
+          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>
+            <Badge badgeContent={4} color="primary">
+              <ShoppingCartOutlined />
+            </Badge>
+          </MenuItem>
+        </Right>
+      </Wrapper>
     </Container>
   );
 };
