@@ -22,13 +22,23 @@ display: flex;
 align-items: center;
 `;
 
-const SearchContainer = styled.div``;
-const Input = styled.input``;
+const SearchContainer = styled.div`
+border: 0.5px solid lightgray;
+display: flex;
+align-items: center;
+margin-left: 25px;
+padding: 5px;
+`;
+const Input = styled.input`
+border: none;
+`;
 const Center = styled.div`
 flex: 1;
 text-align: center;
 `;
-const Logo = styled.h1``;
+const Logo = styled.h1`
+
+`;
 const Right = styled.div`
 flex: 1;
 display: flex;
