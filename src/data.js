@@ -8,7 +8,7 @@ export const sliderItems = [
     },
     {
         id:2,
-        img: "https://images.pexels.com/photos/9123011/pexels-photo-9123011.jpeg",
+        img: "https://images.pexels.com/photos/4462780/pexels-photo-4462780.jpeg",
         title: "AUTUMN SALE",
         desc: "TIME TO SHOP 'TIL THE LEAVES DROP! DISCOUNTS UP TO 40% OFF.",
         bg: "",
