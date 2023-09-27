@@ -8,7 +8,7 @@ const Home = () => {
         <Navbar />
         <Slider />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

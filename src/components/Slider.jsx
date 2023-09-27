@@ -79,10 +79,6 @@ background-color: transparent;
 cursor: pointer;
 `;
 
-
-
-
-
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
     const handleClick = (direction) => {
@@ -91,7 +87,8 @@ const Slider = () => {
         } else {
             setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
         }
-    }
+    };
+
     return (
         <Container>
             <Arrow direction="left" onClick={() => handleClick("left")}>
@@ -104,9 +101,9 @@ const Slider = () => {
                     <Image src={item.img} />
                     </ImgContainer>
                     <InfoContainer>
-                        <Title></Title>
-                        <Desc></Desc>
-                        <Button></Button>
+                        <Title>{item.title}</Title>
+                        <Desc>{item.desc}</Desc>
+                        <Button>SHOP NOW</Button>
                     </InfoContainer>
                 </Slide>
                 ))}
