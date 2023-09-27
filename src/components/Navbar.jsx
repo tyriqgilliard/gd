@@ -15,7 +15,13 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 `;
-const Left = styled.div``;
+
+const Left = styled.div`
+flex: 1;
+display: flex;
+align-items: center;
+`;
+
 const SearchContainer = styled.div``;
 const Input = styled.input``;
 const Center = styled.div``;
