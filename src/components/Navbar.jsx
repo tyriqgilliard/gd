@@ -7,8 +7,28 @@ import { mobile } from "../responsive";
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
-  )
-}
+    <Container>
+        <Wrapper>
+            <Left>
+                <SearchContainer>
+                    <Input placeholder="Search" />
+                    <Search style={{ color: "gray", fontSize: 16 }} />
+                </SearchContainer>
+            </Left>
+            <Center>
+                <Logo></Logo>
+            </Center>
+            <Right>
+                <MenuItem>REGISTER</MenuItem>
+                <MenuItem>
+                <Badge badgeContent={} color="primary">
+                    <ShoppingCartOutlined />    
+                </Badge>
+            </MenuItem>
+            </Right>
+        </Wrapper>
+    </Container>
+  );
+};
 
-export default Navbar
+export default Navbar;
