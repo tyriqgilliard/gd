@@ -174,38 +174,19 @@ export const Cart = () => {
           <Top>
             <TopButton onClick={() => navigate("/")}>CONTINUE SHOPPING</TopButton>
             <TopTexts>
-              <TopText>Shopping Bag(2)</TopText>
-              <TopText>Your Wishlist (0)</TopText>
+              <TopText>Shopping Bag()</TopText>
             </TopTexts>
             <TopButton type="filled">CHECKOUT NOW</TopButton>
           </Top>
           <Bottom>
             <Info>
-              /* Product */
               <Product>
-                <ProductDetail>
-                  <Image src={item} />
-                  <Details>
-                    <ProductName>
-                      <b>Product:</b> JESSIE THUNDER SHOES
-                    </ProductName>
-                    <ProductId>
-                      <b>ID:</b> 93813718293
-                    </ProductId>
-                    <ProductColor color="black" />
-                    <ProductSize>
-                      <b>Size:</b> 37.5
-                    </ProductSize>
-                  </Details>
-                </ProductDetail>
-                <PriceDetail>
-                  <ProductAmountContainer>
-                    <Add />
-                    <ProductAmount>2</ProductAmount>
-                    <Remove />
-                  </ProductAmountContainer>
-                  <ProductPrice>$ 30</ProductPrice>
-                </PriceDetail>
+                {item.map((item) => {
+                  if (cartItems[item.id] !== 0) {
+                    return <CartItem data={item}/>
+                  }
+                })}
+                
               </Product>
               <Hr />
               <Product>

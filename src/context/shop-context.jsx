@@ -59,7 +59,7 @@ export const ShopContextProvider = (props) => {
   };
 
   return (
-    <ShopContext.Provider value={{cartItems: [], getTotalCartAmount: () => {}, checkout: () => {} }}>
+    <ShopContext.Provider value={contextValue}>
       <Cart />
     </ShopContext.Provider>
   );
