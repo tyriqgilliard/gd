@@ -75,6 +75,8 @@ letter-spacing: 3px;
 const Button = styled.button`
 padding: 10px;
 font-size: 20px;
+border: solid;
+border-radius: 10px;
 background-color: transparent;
 cursor: pointer;
 `;

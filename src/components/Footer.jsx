@@ -127,10 +127,10 @@ const Payment = styled.img`
         <Right>
           <Title>Contact</Title>
           <ContactItem>
-            <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+            <Room style={{marginRight:"10px"}}/> Loganville 30052
           </ContactItem>
           <ContactItem>
-            <Phone style={{marginRight:"10px"}}/> +1 234 56 78
+            <Phone style={{marginRight:"10px"}}/> +1 943-243-1397
           </ContactItem>
           <ContactItem>
             <MailOutline style={{marginRight:"10px"}} /> tyriqg_mgmt@gmail.com
