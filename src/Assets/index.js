@@ -10,6 +10,9 @@ import malikskydsgaard from "./malikskydsgaard.png";
 import nestergraphernedie from "./nestergraphernedie.png";
 import sincerelymedia from "./sincerelymedia.png";
 import yasharmolaee from "./yasharmolaee.png";
+import pexelsphoto3696755 from "./pexelsphoto3696755.jpeg";
+import pexelsaleksandarpasaric2907428 from "./pexelsaleksandarpasaric2907428.jpg";
+import pexelsphoto5816424 from "./pexelsphoto5816424.jpeg";
 
 export { sweatshirt01 };
 export { sweatshirt02 };
@@ -23,4 +26,6 @@ export { malikskydsgaard };
 export { nestergraphernedie };
 export { sincerelymedia };
 export { yasharmolaee };
-
+export { pexelsphoto3696755 };
+export { pexelsaleksandarpasaric2907428 };
+export { pexelsphoto5816424 };

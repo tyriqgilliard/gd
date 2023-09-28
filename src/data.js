@@ -1,28 +1,28 @@
-import { keenanbeasley, malikskydsgaard, sincerelymedia, sweatshirt01, sweatshirt02, tshirt01, tshirt02 } from "../src/Assets/index"
+import { keenanbeasley, malikskydsgaard, pexelsaleksandarpasaric2907428, pexelsphoto3696755, pexelsphoto5816424, sincerelymedia, sweatshirt01, sweatshirt02, tshirt01, tshirt02 } from "../src/Assets/index"
 
 
 
 export const sliderItems = [
     {
         id:1,
-        img: "https://images.pexels.com/photos/3696755/pexels-photo-3696755.jpeg",
+        img: pexelsphoto3696755,
         title: "NEW ARRIVALS",
         desc: "DON'T COMPROMISE ON STYLE! GET FLAT 25% OFF FOR NEW ARRIVALS.",
-        bg: "",
+        bg: "F0F0F0",
     },
     {
         id:2,
-        img: "https://images.pexels.com/photos/2907428/pexels-photo-2907428.jpeg",
+        img: pexelsaleksandarpasaric2907428,
         title: "AUTUMN SALE",
         desc: "TIME TO SHOP 'TIL THE LEAVES DROP! DISCOUNTS UP TO 40% OFF.",
-        bg: "",
+        bg: "F0F0F0",
     },
     {
         id:3,
-        img: "https://images.pexels.com/photos/5816424/pexels-photo-5816424.jpeg",
+        img: pexelsphoto5816424,
         title: "BLACK AND WHITE COLLECTION",
         desc: "CHECK OUT OUR NEWEST AND EXCLUSIVE B&W COLLECTION.",
-        bg: "",
+        bg: "F0F0F0",
     },
     {
         id:4,
