@@ -3,10 +3,8 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import { Link } from "react-router-dom";
-import Cart from "../pages/Cart";
 
-// Internal Components for Navbar //
+// --- Internal Components for Navbar --- //
 const Container = styled.div`
   height: 60px;
   ${mobile({ height: "50px" })}
@@ -32,6 +30,7 @@ const Language = styled.span`
   ${mobile({ display: "none" })}
 `;
 
+// --- Search Bar & Input --- //
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
   display: flex;
@@ -50,10 +49,6 @@ const Center = styled.div`
   text-align: center;
 `;
 
-const Logo = styled.h1`
-  font-weight: bold;
-  ${mobile({ fontSize: "24px" })}
-`;
 const Right = styled.div`
   flex: 1;
   display: flex;
@@ -66,35 +61,54 @@ const MenuItems = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
-  ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+// --- Menu Items --- //
 const MenuItem01 = ({ to }) => {
   return (
-    <a href={`/${to}`}>
-        REGISTER
+    <a href={`/${to}`} style={{
+        textDecoration: 'none',
+    }}>
+      <MenuItems>REGISTER</MenuItems>
     </a>
-  )
+  );
 };
 
+const Logo = ({ to }) => {
+    return (
+      <a href={`/${to}`} style={{
+          textDecoration: 'none',
+          fontWeight: 'bold',
+          color: 'black',
+      }}>
+        <MenuItems>GLOBALLY DISCLOSED</MenuItems>
+      </a>
+    );
+  };
+
 const MenuItem02 = ({ to }) => {
-    return (
-      <a href={`/${to}`}>
-        LOGIN
-      </a>
-    )
-  };
+  return (
+    <a href={`/${to}`} style={{
+        textDecoration: 'none',
+    }}>
+      <MenuItems>LOGIN</MenuItems>
+    </a>
+  );
+};
 
-  const MenuItem03 = ({ to }) => {
-    return (
-      <a href={`/${to}`}>
-              <Badge badgeContent={4} color="primary">
-                <ShoppingCartOutlined />
-              </Badge>
-      </a>
-    )
-  };
-
+const MenuItem03 = ({ to }) => {
+  return (
+    <a href={`/${to}`} >
+      <Badge badgeContent={3} color="primary">
+        <ShoppingCartOutlined
+          style={{
+            marginLeft: "20px",
+          }}
+        />
+      </Badge>
+    </a>
+  );
+};
 
 // Navigation Bar //
 const Navbar = () => {
@@ -109,14 +123,12 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>GLOBALLY DISCLOSED</Logo>
+          <Logo to=""></Logo>
         </Center>
         <Right>
-          <MenuItems>
-            <MenuItem01 to="register">REGISTER</MenuItem01>
-            <MenuItem02 to="login">SIGN IN</MenuItem02>
-            <MenuItem03 to="cart"></MenuItem03>
-          </MenuItems>
+          <MenuItem01 to="register"></MenuItem01>
+          <MenuItem02 to="login"></MenuItem02>
+          <MenuItem03 to="cart"></MenuItem03>
         </Right>
       </Wrapper>
     </Container>
