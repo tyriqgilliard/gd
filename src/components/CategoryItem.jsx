@@ -33,7 +33,24 @@ const Title = styled.h1`
     margin-bottom: 20px;
 `;
 
-const Button = styled.button`
+const Button = ({ to }) => {
+  return (
+    <a href={`/${to}`}
+    style={{
+      border: 'none',
+      padding: '10px',
+      backgroundColor: 'white',
+      color: 'black',
+      cursor: 'pointer',
+      fontWeight: '600',
+      textDecoration: 'none',
+    }}>
+      SHOP NOW
+    </a>
+  );
+};
+
+styled.button`
     border:none;
     padding: 10px;
     background-color: white;
@@ -48,7 +65,7 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button>SHOP NOW</Button>
+        <Button to="allproducts"></Button>
       </Info>
     </Container>
   );

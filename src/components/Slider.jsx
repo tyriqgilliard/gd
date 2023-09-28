@@ -73,13 +73,25 @@ font-weight: 500;
 letter-spacing: 3px;
 `;
 
-const Button = styled.button`
-padding: 10px;
-font-size: 20px;
-border: solid;
-border-radius: 10px;
-background-color: transparent;
-cursor: pointer;
+const Button = ({ to }) => {
+    return (
+      <a href={`/${to}`}
+      style={{
+        color: 'black',
+        padding: '10px',
+        fontSize: '20px',
+        border: 'solid',
+        borderRadius: '10px',
+        backgroundColor: 'transparent',
+        cursor: 'pointer',
+        textDecoration: 'none',
+      }}>
+        SHOP NOW
+      </a>
+    );
+  };
+styled.button`
+
 `;
 
 const Slider = () => {
