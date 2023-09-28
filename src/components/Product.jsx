@@ -67,7 +67,7 @@ const Icon = styled.div`
   }
 `;
 
-  const Product = ({ item }) => {
+  const Product = () => {
     return (
       <Container>
         <Circle />

@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import Product from "./pages/Product";
+import ProductPage from "./pages/ProductPage";
 import Cart from "./pages/Cart";
 
 const App = () => {
@@ -19,10 +19,10 @@ const App = () => {
                 element={<Login />} />
             <Route path="/register"
                 element={<Register />} />
-            <Route path="/products"
+            <Route path="/allproducts"
                 element={<ProductList />} />
             <Route path="/product"
-                element={<Product />} />
+                element={<ProductPage />} />
         </Routes>
     </Router>
 </div>

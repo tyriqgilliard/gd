@@ -1,4 +1,4 @@
-import { sweatshirt01 } from "../src/Assets/index"
+import { keenanbeasley, malikskydsgaard, sincerelymedia, sweatshirt01, sweatshirt02, tshirt01, tshirt02 } from "../src/Assets/index"
 
 
 
@@ -12,7 +12,7 @@ export const sliderItems = [
     },
     {
         id:2,
-        img: "https://images.pexels.com/photos/5225398/pexels-photo-5225398.jpeg",
+        img: "https://images.pexels.com/photos/2907428/pexels-photo-2907428.jpeg",
         title: "AUTUMN SALE",
         desc: "TIME TO SHOP 'TIL THE LEAVES DROP! DISCOUNTS UP TO 40% OFF.",
         bg: "",
@@ -41,17 +41,17 @@ export const categories = [
     },
     {
         id:2,
-        img: "https://drive.google.com/file/d/1WdI3O8GbaiCmhMREaPcpBEtD3ftzoCMU/view",
+        img: keenanbeasley,
         title: "COZY COMFORT",
     },
     {
         id:3,
-        img: "https://drive.google.com/file/d/16XpZCrFfp4Wno14Y6ImTOexGtunJV01X/view",
+        img: malikskydsgaard,
         title: "GLOBAL TEES",
     },
     {
         id:4,
-        img: "https://drive.google.com/file/d/1WV8VBgKz9kWb1mvdVWCCT35O77ggGKRT/view",
+        img: sincerelymedia,
         title: "WARM AND SELECT",
     },
 ]
@@ -63,15 +63,15 @@ export const item = [
     },
     {
         id:2,
-        img: "",
+        img: sweatshirt02,
     },
     {
         id:3,
-        img: "",
+        img: tshirt01,
     },
     {
         id:4,
-        img: "",
+        img: tshirt02,
     },
     {
         id:5,
@@ -95,7 +95,7 @@ export const item = [
 export const popularProducts = [
     {
         id:1,
-        img: "",
+        img: sweatshirt01,
     },
     {
         id:2,

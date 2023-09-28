@@ -115,7 +115,7 @@ const Button = styled.button`
   }
 `;
 
-const Product = () => {
+const ProductPage = () => {
   return (
     <Container>
       <Navbar />
@@ -168,4 +168,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductPage;
