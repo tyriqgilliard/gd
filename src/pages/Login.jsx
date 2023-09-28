@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import {mobile} from "../responsive";
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { mobile } from "../responsive";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import { useState } from "react";
+import FormInput from "../components/FormInput";
 
 const Container = styled.div`
   width: 100vw;
@@ -29,26 +31,31 @@ const Title = styled.h1`
   font-weight: 300;
 `;
 
-const MenuItem = styled.div`
-`;
+const MenuItem = styled.div``;
 
 const Logo = ({ to }) => {
-    return (
-      <a href={`/${to}`} style={{
-          textDecoration: 'none',
-          color: 'black',
-          fontSize: '10px',
-      }}>
-            <ArrowBackIcon style={{
-                fontSize: '10px',
-                marginRight: '3px',
-                }} />BACK HOME
-      </a>
-    );
-  };
+  return (
+    <a
+      href={`/${to}`}
+      style={{
+        textDecoration: "none",
+        color: "black",
+        fontSize: "10px",
+      }}
+    >
+      <ArrowBackIcon
+        style={{
+          fontSize: "10px",
+          marginRight: "3px",
+        }}
+      />
+      BACK HOME
+    </a>
+  );
+};
 
 styled.div`
-font-size: 15px;
+  font-size: 15px;
 `;
 
 const Form = styled.form`
@@ -56,12 +63,12 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-const Input = styled.input`
-  flex: 1;
-  min-width: 40%;
-  margin: 10px 0;
-  padding: 10px;
-`;
+// const FormInput = styled.input`
+//   flex: 1;
+//   min-width: 40%;
+//   margin: 10px 0;
+//   padding: 10px;
+// `;
 
 const Button = styled.button`
   width: 40%;
@@ -81,14 +88,58 @@ const Link = styled.a`
 `;
 
 const Login = () => {
+
+  const [values, setValues] = useState({
+    username: "",
+    password: "",
+  });
+  
+  const inputs = [
+    {
+      id: 1,
+      name: "username",
+      type: "text",
+      placeholder: "Username",
+      errorMessage: "Username should be 3-16 characters and shouldn't include any special character",
+      label: "Username",
+    },
+    {
+      id: 2,
+      name: "password",
+      type: "text",
+      placeholder: "Password",
+      errorMessage: "",
+      label: "Password",
+      required: true,
+    },
+    
+  ];
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    console.log(Object.fromEntries(data.entries()));
+  };
+  
+  const onChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
         <Logo to=""></Logo>
-        <Form>
-          <Input placeholder="Username" />
-          <Input placeholder="Password" />
+        <Form onSubmit={handleSubmit}>
+          {inputs.map((input) => (
+            <FormInput
+              key={input.id}
+              {...input}
+              value={values[input.name]}
+              y
+              onChange={onChange}
+            />
+          ))}
           <Button>LOGIN</Button>
           <Link>FORGOT MY PASSWORD?</Link>
           <Link>CREATE A NEW ACCOUNT</Link>
