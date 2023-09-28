@@ -63,13 +63,6 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-// const FormInput = styled.input`
-//   flex: 1;
-//   min-width: 40%;
-//   margin: 10px 0;
-//   padding: 10px;
-// `;
-
 const Button = styled.button`
   width: 40%;
   border: none;
@@ -77,15 +70,38 @@ const Button = styled.button`
   background-color: teal;
   color: white;
   cursor: pointer;
+  margin-top: 10px;
   margin-bottom: 10px;
 `;
 
-const Link = styled.a`
-  margin: 5px 0px;
-  font-size: 12px;
-  text-decoration: underline;
-  cursor: pointer;
+const NewAccount = styled.button`
+border: none;
+background-color: white;
+text-decoration: underline;
+cursor: pointer;
 `;
+
+const Link01 = ({ to }) => {
+  return (
+    <a href={`/${to}`} style={{
+      margin: '5px 0px',
+      fontSize: '12px',
+    }}>
+      <NewAccount>CREATE A NEW ACCOUNT</NewAccount>
+    </a>
+  );
+};
+
+const Link02 = ({ to }) => {
+  return (
+    <a href={`/${to}`} style={{
+      margin: '5px 0px',
+      fontSize: '12px',
+    }}>
+      <NewAccount>FORGOT MY PASSWORD?</NewAccount>
+    </a>
+  );
+};
 
 const Login = () => {
 
@@ -141,8 +157,9 @@ const Login = () => {
             />
           ))}
           <Button>LOGIN</Button>
-          <Link>FORGOT MY PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Link01 to="register">CREATE A NEW ACCOUNT</Link01>
+          <Link02 to="">FORGOT MY PASSWORD?</Link02>
+
         </Form>
       </Wrapper>
     </Container>

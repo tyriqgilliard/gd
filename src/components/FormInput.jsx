@@ -11,8 +11,21 @@ const FormInput = (props) => {
 
   return (
     <div className="formInput">
-      {/* <label>{label}</label> */}
+      {/* <label
+      style={{
+        fontSize: '12px',
+        color: 'rgb(0, 0, 0)',
+      }}
+      >{label}</label> */}
       <input
+      style={{
+        flex: '1',
+        minWidth: '40%',
+        margin: '20px 10px 0px 0px',
+        padding: '10px',
+        borderRadius: '5px',
+        border: '1px solid gray',
+      }}
         {...inputProps}
         onChange={onChange}
         onBlur={handleFocus}
@@ -21,7 +34,16 @@ const FormInput = (props) => {
         }
         focused={focused.toString()}
       />
-      <span>{errorMessage}</span>
+      <span
+        style={{
+          fontSize: "12px",
+          padding: "3px",
+          color: "red",
+          display: "none",
+        }}
+      >
+        {errorMessage}
+      </span>
     </div>
   );
 };

@@ -53,7 +53,8 @@ const Logo = ({ to }) => {
 };
 
 const Form = styled.form`
-margin: 10px;
+display: flex;
+flex-wrap: wrap;
 `;
 
 const Agreement = styled.span`
@@ -72,25 +73,16 @@ const Button = styled.button`
 
 const Register = () => {
   const [values, setValues] = useState({
-    firstName: "",
-    lastName: "",
     username: "",
     email: "",
     birthday: "",
     password: "",
+    confirmPassword:"",
   });
 
   const inputs = [
     {
       id: 1,
-      name: "firstName",
-      type: "text",
-      placeholder: "First Name",
-      errorMessage: "",
-      label: "First Name",
-    },
-    {
-      id: 2,
       name: "username",
       type: "text",
       placeholder: "Username",
@@ -101,7 +93,7 @@ const Register = () => {
       required: true,
     },
     {
-      id: 3,
+      id: 2,
       name: "email",
       type: "email",
       placeholder: "E-mail",
@@ -110,22 +102,32 @@ const Register = () => {
       required: true,
     },
     {
+      id: 3,
+      name: "birthday",
+      type: "date",
+      placeholder: "Birthday",
+      label: "Birthday",
+    },
+    {
       id: 4,
       name: "password",
-      type: "text",
+      type: "password",
       placeholder: "Password",
       errorMessage:
-        "Password should 8-20 characters and include at least 1 letter, 1 number, and 1 special character!",
+        "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
       label: "Password",
       pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
       required: true,
     },
     {
       id: 5,
-      name: "birthday",
-      type: "date",
-      placeholder: "Birthday",
-      label: "Birthday",
+      name: "confirmPassword",
+      type: "password",
+      placeholder: "Confirm Password",
+      errorMessage: "Passwords don't match!",
+      label: "Confirm Password",
+      pattern: values.password,
+      required: true,
     },
   ];
 
