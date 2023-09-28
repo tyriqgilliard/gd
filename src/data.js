@@ -1,3 +1,7 @@
+import { sweatshirt01 } from "../src/Assets/index"
+
+
+
 export const sliderItems = [
     {
         id:1,
@@ -55,7 +59,7 @@ export const categories = [
 export const item = [
     {
         id:1,
-        img: "",
+        img: sweatshirt01,
     },
     {
         id:2,
