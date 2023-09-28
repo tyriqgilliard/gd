@@ -1,7 +1,15 @@
-import { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { item } from "../data";
+import Cart from "../pages/Cart";
 
-export const ShopContext = createContext(null);
+
+const defaultContextValue = {
+    cartItems: [],
+    getTotalCartAmount: () => {},
+    checkout: () => {}
+};
+
+export const ShopContext = React.createContext(defaultContextValue);
 
 const getDefaultCart = () => {
   let cart = {};
@@ -51,8 +59,8 @@ export const ShopContextProvider = (props) => {
   };
 
   return (
-    <ShopContext.Provider value={contextValue}>
-      {props.children}
+    <ShopContext.Provider value={{cartItems: [], getTotalCartAmount: () => {}, checkout: () => {} }}>
+      <Cart />
     </ShopContext.Provider>
   );
 };

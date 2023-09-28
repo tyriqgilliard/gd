@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { ShopContext } from "../../context/shop-context";
+import { ShopContext } from "../context/shop-context";
+import CSS from "./cart.css";
 
 export const CartItem = (props) => {
   const { id, productName, img, price } = props.data;
@@ -8,7 +9,11 @@ export const CartItem = (props) => {
 
   return (
     <div className="cartItem">
-      <img src={img} />
+      <img src={img}
+      style={{
+        width: '200px',
+      }}
+      />
       <div className="description">
         <p>
           <b>{productName}</b>
