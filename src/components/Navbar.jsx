@@ -3,6 +3,8 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
+import Cart from "../pages/Cart";
 
 // Internal Components for Navbar //
 const Container = styled.div`
@@ -60,12 +62,39 @@ const Right = styled.div`
   ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 
-const MenuItem = styled.div`
+const MenuItems = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
+
+const MenuItem01 = ({ to }) => {
+  return (
+    <a href={`/${to}`}>
+        REGISTER
+    </a>
+  )
+};
+
+const MenuItem02 = ({ to }) => {
+    return (
+      <a href={`/${to}`}>
+        LOGIN
+      </a>
+    )
+  };
+
+  const MenuItem03 = ({ to }) => {
+    return (
+      <a href={`/${to}`}>
+              <Badge badgeContent={4} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+      </a>
+    )
+  };
+
 
 // Navigation Bar //
 const Navbar = () => {
@@ -83,13 +112,11 @@ const Navbar = () => {
           <Logo>GLOBALLY DISCLOSED</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
+          <MenuItems>
+            <MenuItem01 to="register">REGISTER</MenuItem01>
+            <MenuItem02 to="login">SIGN IN</MenuItem02>
+            <MenuItem03 to="cart"></MenuItem03>
+          </MenuItems>
         </Right>
       </Wrapper>
     </Container>
