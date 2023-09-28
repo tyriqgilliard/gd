@@ -59,6 +59,58 @@ export const categories = [
 export const item = [
     {
         id:1,
+        productName: "",
+        img: sweatshirt01,
+        price: 35.0,
+    },
+    {
+        id:2,
+        productName: "",
+        img: sweatshirt02,
+        price: 35.0,
+    },
+    {
+        id:3,
+        productName: "",
+        img: tshirt01,
+        price: 25.0,
+    },
+    {
+        id:4,
+        productName: "",
+        img: tshirt02,
+        price: 25.0,
+    },
+    {
+        id:5,
+        productName: "",
+        img: "",
+        price: 25.0,
+    },
+    {
+        id:6,
+        productName: "",
+        img: "",
+        price: 25.0,
+    },
+    {
+        id:7,
+        productName: "",
+        img: "",
+        price: 25.0,
+    },
+    {
+        id:8,
+        productName: "",
+        img: "",
+        price: 25.0,
+    },
+]
+
+
+export const popularProducts = [
+    {
+        id:1,
         img: sweatshirt01,
     },
     {
@@ -72,42 +124,6 @@ export const item = [
     {
         id:4,
         img: tshirt02,
-    },
-    {
-        id:5,
-        img: "",
-    },
-    {
-        id:6,
-        img: "",
-    },
-    {
-        id:7,
-        img: "",
-    },
-    {
-        id:8,
-        img: "",
-    },
-]
-
-
-export const popularProducts = [
-    {
-        id:1,
-        img: sweatshirt01,
-    },
-    {
-        id:2,
-        img: "",
-    },
-    {
-        id:3,
-        img: "",
-    },
-    {
-        id:4,
-        img: "",
     },
     {
         id:5,
